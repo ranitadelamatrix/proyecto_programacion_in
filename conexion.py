@@ -34,7 +34,7 @@ class BaseDeDatos(): #se crea la clase conexion
                 self.conexion.commit() #se confirma la sentencia sql
                 self.conexion.close() #se cierra la conexion
             except mysql.connector.Error as error:
-                print("a ocurrido este error: ", error)
+                    print("a ocurrido este error: ", error)
 
 
     def Listado_De_Productos(self): #se crea el metodo Listado_De_Productos para mostrar los datos de la tabla productos
