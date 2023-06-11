@@ -1,5 +1,7 @@
 import conexion #importar la clase conexion
 from ingredientes import Productos  #importar la clase productos
+from ingredientes import ingredientes #importar la clase ingredientes
+
 
 con = conexion.BaseDeDatos() #se crea un objeto de la clase conexion
 
@@ -67,7 +69,7 @@ elif dato == 2: #si el numero es 2 se ejecuta el codigo para ingresar ala tabla 
         nombre = input("ingresa el nombre del ingrediente")
         descripcion = input("Agrega una descripcion")
 
-        #datos = ingredientes(idingredientes, nombre, descripcion) 
+        datos = ingredientes(idingredientes, nombre, descripcion) 
         con.insertar_ingredientes(datos) #se ejecuta el metodo insertar_ingredientes de la clase conexion
         
     elif Ingredientes == 2: #si el numero es 2 se ejecuta el codigo para visualizar los ingredientes
@@ -81,7 +83,7 @@ elif dato == 2: #si el numero es 2 se ejecuta el codigo para ingresar ala tabla 
         nombre = input("ingresa el nombre del ingrediente")
         descripcion = input("Agrega una descripcion")
 
-        #datos = ingredientes(idingredientes, nombre, descripcion) 
+        datos = ingredientes(idingredientes, nombre, descripcion) 
         con.actualizar_ingredientes(datos) #se ejecuta el metodo actualizar_ingredientes de la clase conexion
 
     elif Ingredientes == 4: #si el numero es 4 se ejecuta el codigo para eliminar los ingredientes
