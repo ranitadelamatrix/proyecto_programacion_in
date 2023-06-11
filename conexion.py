@@ -101,7 +101,7 @@ class BaseDeDatos(): #se crea la clase conexion
                 self.conexion.close()
             except mysql.connector.Error as error:
                 print("a ocurrido este error: ", error)
-
+    
     def Listado_De_Ingredientes(self):
         if self.conexion.is_connected():
             try:
