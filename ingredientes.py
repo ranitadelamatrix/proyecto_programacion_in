@@ -1,30 +1,30 @@
-class Productos(): #se crea la clase productos
-    id_producto = 0 #se crean las variables de la clase productos
+class Productos():
+    id_producto = 0
     nombre = ""
     descripcion = ""
     precio = 0
     id_ingredientes = 0
 
-    def __init__(self, id_producto, nombre, descripcion, precio, id_ingredientes) -> None: #se crea el constructor de la clase productos
-        self.id_producto = id_producto #se asignan los valores a las variables d
+    def __init__(self, id_producto, nombre, descripcion, precio, id_ingredientes) -> None:
+        self.id_producto = id_producto
         self.nombre = nombre
         self.descripcion = descripcion
         self.precio = precio
         self.id_ingredientes = id_ingredientes
 
-    def getid_producto(self): #se crean los metodos get y set de la clase productos
+    def getid_producto(self):
         return self.id_producto
     def getnombre(self):
         return self.nombre
     def getdescripcion(self):
-        return self.descripcion # se retorna los valores de las variables
+        return self.descripcion
     def getprecio(self):
         return self.precio
     def getid_ingredientes(self):
         return self.id_ingredientes
     
-    def setid_producto(self, id_producto): 
-        self.id_producto = id_producto #se asignan los valores a las variables
+    def setid_producto(self, id_producto):
+        self.id_producto = id_producto
     def setnombre(self, nombre):
         self.nombre = nombre
     def setdescripcion(self, descripcion):
@@ -34,27 +34,30 @@ class Productos(): #se crea la clase productos
     def setid_ingredientes(self, id_ingredientes):
         self.id_ingredientes = id_ingredientes
 
-
-class ingredientes(): #se crea la clase ingredientes
-    id_ingredientes = 0 #se crean las variables de la clase ingredientes
+class Ingredientes():
+    id_ingredientes = 0
     nombre = ""
     descripcion = ""
 
-    def __init__(self, id_ingredientes, nombre, descripcion) -> None: #se crea el constructor de la clase ingredientes
-        self.id_ingredientes = id_ingredientes
+    def __init__(self, id_ingredintes, nombre, descripcion) -> None:
+        self.id_ingredientes = id_ingredintes
         self.nombre = nombre
         self.descripcion = descripcion
-
+    
     def getid_ingredientes(self):
         return self.id_ingredientes
     def getnombre(self):
         return self.nombre
     def getdescripcion(self):
         return self.descripcion
-
-    def setid_ingredientes(self, id_ingredientes):
-        self.id_ingredientes = id_ingredientes
+    
+    def setid_ingredientes(self, id_ingredintes):
+        self.id_ingredientes = id_ingredintes
     def setnombre(self, nombre):
         self.nombre = nombre
     def setdescripcion(self, descripcion):
         self.descripcion = descripcion
+
+    
+
+        
