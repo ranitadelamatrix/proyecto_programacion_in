@@ -7,7 +7,7 @@ class BaseDeDatos():
                 host = "localhost",
                 user = "root",
                 port = 3306,
-                password = "Sferreyra$2002",
+                password = "pancho1677",
                 database = "bigbread"
             )
             if self.conexion.is_connected:
