@@ -44,6 +44,9 @@ class BaseDeDatos():
                 sentenciaSQL = "SELECT * FROM productos"
                 cursor.execute(sentenciaSQL)
                 resultados= cursor.fetchall()
+                if len(resultados) < 1:
+                    print("")
+                    print("---| no hay datos para mostrar |---")
                 self.conexion.close()
                 return resultados
             
@@ -57,6 +60,9 @@ class BaseDeDatos():
                 sentenciaSQL = "SELECT * FROM ingredientes"
                 cursor.execute(sentenciaSQL)
                 resultados= cursor.fetchall()
+                if len(resultados) < 1:
+                    print("")
+                    print("---| no hay datos para mostrar |---")
                 self.conexion.close()
                 return resultados
             
@@ -74,7 +80,6 @@ class BaseDeDatos():
                 cursor.execute(sql, data)
                 self.conexion.commit()
                 self.conexion.close()
-                print("se agergo ingredientes")
             except mysql.connector.Error() as error:
                 print("el error es: " , error)
     def eliminarProducto(self, a):
@@ -85,7 +90,6 @@ class BaseDeDatos():
                 cursor.execute(sql)
                 self.conexion.commit()
                 self.conexion.close()
-                print("producto eliminado con exito")
             except mysql.connector.Error() as Error:
                 print("el error es el siguiente: ", Error)
     def eliminarIngredientes(self, a):
@@ -96,7 +100,6 @@ class BaseDeDatos():
                 cursor.execute(sql)
                 self.conexion.commit()
                 self.conexion.close()
-                print("ingrediente eliminado con exito")
             except mysql.connector.Error() as Error:
                 print("el error es el siguiente: ", Error)
 
@@ -121,6 +124,5 @@ class BaseDeDatos():
                 cursor.execute(sql)
                 self.conexion.commit()
                 self.conexion.close()
-                print("se realizo con exito los cambios")
             except mysql.connector.Error() as error:
                 print("el error es: ", error)
