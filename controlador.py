@@ -38,11 +38,11 @@ def verIngredientes():
 
 def insertarProductos():
      conec = conexion.BaseDeDatos()
-     id_producto = int(input("ingrese id del producto: "))
-     nombre = input("ingrese el nombre del producto: ")
-     descripcion = input("ingrese descripcion: ")
-     precio = input("ingrese el precio: ")
-     id_ingrediente = input("ingrese id del ingrediente: ")
+     id_producto = int(input("--|ingrese id del producto: |--"))
+     nombre = input("--|ingrese el nombre del producto: |--")
+     descripcion = input("--|ingrese descripcion: |--")
+     precio = input("--|ingrese el precio: |--")
+     id_ingrediente = input("--|ingrese id del ingrediente:  |--")
      dato = Productos(id_producto, nombre, descripcion, precio,  id_ingrediente)
      conec.insertar_productos(dato)
      print("")
@@ -53,9 +53,9 @@ def insertarProductos():
     
 def insertarIngredientes():
      conec = conexion.BaseDeDatos()
-     id_ingredinetes = int(input("ingrese id de los ingredietes: "))
-     nombre = input("ingresar nombre: ")
-     descripcion = input("ingrese descripcion: ")
+     id_ingredinetes = int(input("--|ingrese id de los ingredietes: |--"))
+     nombre = input("--|ingresar nombre: |--")
+     descripcion = input("--|ingrese descripcion: |--")
      dato = Ingredientes(id_ingredinetes, nombre, descripcion)
      conec.insertarIngredientes(dato)
      print("")
@@ -67,7 +67,7 @@ def insertarIngredientes():
 def eliminarProducto():
      cone = conexion.BaseDeDatos()
      verProductos()
-     id = int(input("ingrese el id del producto que desea eliminar: "))
+     id = int(input("--|ingrese el id del producto que desea eliminar: |-- "))
      cone.eliminarProducto(id)
      print("")
      print("producto eliminado con exito")
@@ -77,7 +77,8 @@ def eliminarProducto():
     
 def eliminarIngredientes():
      cone = conexion.BaseDeDatos()
-     id = int(input("ingrese id del ingrediente que desa eliminar: "))
+     verIngredientes()
+     id = int(input("--|ingrese id del ingrediente que desa eliminar: |--"))
      cone.eliminarIngredientes(id)
      print("")
      print("ingrediente eliminado con exito")
@@ -87,8 +88,8 @@ def eliminarIngredientes():
 
 def actualizarProducto():
      cone = conexion.BaseDeDatos()
-     id = int (input("ingrese el id del producto a modificar:"))
-     precio = int(input("ingrese el nuevo precio"))
+     id = int (input("--|ingrese el id del producto a modificar: |--"))
+     precio = int(input("--|ingrese el nuevo precio: |--"))
      cone.actualizarProdcutos(id, precio)
      print("")
      print("producto actualizado con exito")
@@ -98,8 +99,8 @@ def actualizarProducto():
 
 def actualizarIngredientes():
     cone = conexion.BaseDeDatos()
-    nombre = input("ingrese el id a actualizar")
-    descripcion = input("ingrese nueva descripcion")
+    nombre = input("ingrese el id a actualizar ")
+    descripcion = input("ingrese nueva descripcion ")
     cone.actualizarIngredientes(nombre, descripcion)
     print("")
     print("ingrediente actualizado con exito")
