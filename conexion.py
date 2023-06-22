@@ -7,21 +7,20 @@ class BaseDeDatos():
                 host = "localhost",
                 user = "root",
                 port = 3306,
-                password = "pancho1677",
+                password = "Sferreyra$2002",
                 database = "bigbread"
             )
             if self.conexion.is_connected:
                 print("conexion exitosa")
                 
         except mysql.connector.Error() as error:
-            print("a ocurrido este error: ", error)
+            print("ah ocurrido este error: ", error)
 
     def insertar_productos(self, a):
         if self.conexion.is_connected:
             try:
                 cursor = self.conexion.cursor()
-                sentenciaSql = "INSERT INTO productos values(%s, %s, %s, %s, %s)"
-                print("estoy aqui")               
+                sentenciaSql = "INSERT INTO productos values(%s, %s, %s, %s, %s)"               
                 data = (a.getid_producto(),
                          a.getnombre(),
                          a.getdescripcion(),
@@ -34,7 +33,7 @@ class BaseDeDatos():
                 self.conexion.commit()
                 self.conexion.close()
             except mysql.connector.Error as error:
-                print("a ocurrido este error: ", error)
+                print("ah ocurrido este error: ", error)
 
 
     def Listado_De_Productos(self):
@@ -51,7 +50,7 @@ class BaseDeDatos():
                 return resultados
             
             except mysql.connector.Error as error:
-                print("a ocurrido este error al tratar de mostrar los datos: ", error)
+                print("ah ocurrido este error al tratar de mostrar los datos: ", error)
     
     def ListadoIngredientes(self):
         if self.conexion.is_connected():
@@ -67,7 +66,7 @@ class BaseDeDatos():
                 return resultados
             
             except mysql.connector.Error as error:
-                print("a ocurrido este error al tratar de mostrar los datos: ", error)
+                print("ah ocurrido este error al tratar de mostrar los datos: ", error)
 
     def insertarIngredientes(self, a):
         if self.conexion.is_connected:
@@ -82,6 +81,7 @@ class BaseDeDatos():
                 self.conexion.close()
             except mysql.connector.Error() as error:
                 print("el error es: " , error)
+
     def eliminarProducto(self, a):
         if self.conexion.is_connected:
             try:
