@@ -1,5 +1,5 @@
 import conexion 
-from ingredientes import Productos
+from productos import Productos
 from ingredientes import Ingredientes
 
 def verProductos():
