@@ -3,8 +3,8 @@ import controlador as con
 print("--------------------Bienvenido a BigBread-------------------")
 print("")
 
-while True:
-    print("--------------------| Menu |-------------------")
+while True: 
+    print("--------------------| Menu |-------------------") #interfaz grafca del programa
     print("")
     print("-----!seleccione una opcion para continuar!-----")
     print("")
